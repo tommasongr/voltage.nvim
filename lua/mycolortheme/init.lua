@@ -9,11 +9,13 @@ function M.setup()
 
 	local colors = {
 		bg = "#000000",
-		fg = "#ffffff"
+		fg = "#ffffff",
+		green = { fg = "#3ad070", bg = nil }
 	}
 
 	local highlights = {
-		Normal = { fg = colors.fg, bg = colors.bg }
+		Normal = { fg = colors.fg, bg = colors.bg },
+		Constant = { fg = colors.green.fg, bg = colors.green.bg }
 	}
 
 	for group, opts in pairs(highlights) do
