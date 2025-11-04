@@ -1,6 +1,12 @@
 local M = {}
 
 function M.setup()
+	vim.cmd("highlight clear")
+	vim.cmd("syntax reset")
+
+	vim.o.background = "dark"
+	vim.g.colors_name = "my color theme"
+
 	local colors = {
 		bg = "#000000",
 		fg = "#ffffff"
