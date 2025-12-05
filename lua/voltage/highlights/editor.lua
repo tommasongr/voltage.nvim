@@ -4,13 +4,15 @@ function M.setup(colors, config)
 	local accent = colors[config.accent]
 
 	return {
-		Normal = { fg = colors.fg, bg = colors.bg },
+		Normal = { fg = colors.fg },
+		NormalFloat = { fg = colors.fg },
 		NonText = { fg = colors.dimmed },
 		Conceal = { fg = colors.dimmed },
 
-		Cursor = { bg = accent.regular, fg = colors.inverted },
-		CursorLine = { bg = accent.darker },
-		CursorColumn = { bg = accent.darker },
+		Cursor = { bg = accent.regular, fg = accent.darkest },
+		CursorLine = { bg = accent.darkest  },
+		CursorLineNr = { fg = accent.regular },
+		CursorColumn = { bg = accent.darkest },
 		ColorColumn = { bg = accent.dark },
 
 		Visual = { bg = accent.dark },
@@ -31,7 +33,6 @@ function M.setup(colors, config)
 		MatchParen = { fg = accent.regular },
 
 		LineNr = { fg = colors.dimmed },
-		CursorLineNr = { fg = accent.regular },
 		SignColumn = {},
 
 		Folded = { fg = accent.light },
@@ -48,7 +49,6 @@ function M.setup(colors, config)
 		PmenuSbar = { bg = accent.regular },
 		PmenuThumb = { bg = accent.regular },
 		PmenuKind = { fg = accent.regular },
-		NormalFloat = {},
 		FloatBorder = { fg = accent.regular },
 		WildMenu = { bg = accent.dark },
 
@@ -70,7 +70,7 @@ function M.setup(colors, config)
 
 		Title = { fg = accent.regular },
 
-		TermCursor = { bg = accent.regular, fg = colors.inverted },
+		TermCursor = { bg = accent.regular, fg = accent.darkest },
 		TermCursorNC = { bg = accent.darker, fg = colors.dimmed },
 
 		QuickFixLine = { bg = accent.dark },
