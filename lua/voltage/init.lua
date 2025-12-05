@@ -1,11 +1,17 @@
 local M = {}
 
-function M.setup(config)
+M.config = {
+	accent = "blue"
+}
+
+function M.setup(opts)
+	M.config = vim.tbl_deep_extend("force", M.config, opts or {})
+
 	vim.cmd("highlight clear")
 	vim.cmd("syntax reset")
 
-	vim.o.background = config.style
-	vim.g.colors_name = "my color theme"
+	vim.o.background = "dark"
+	vim.g.colors_name = "voltage"
 
 	local colors = {
 		bg = nil,
@@ -50,26 +56,26 @@ function M.setup(config)
 	}
 
 	for _, highlight in ipairs({ "editor", "syntax", "treesitter" }) do
-		local mod = require("mycolortheme.highlights." .. highlight)
+		local mod = require("voltage.highlights." .. highlight)
 
-		for group, opts in pairs(mod.setup(colors, config)) do
-			vim.api.nvim_set_hl(0, group, opts)
+		for group, group_opts in pairs(mod.setup(colors, M.config)) do
+			vim.api.nvim_set_hl(0, group, group_opts)
 		end
 	end
 
 	for _, highlight in ipairs({ "ruby" }) do
-		local mod = require("mycolortheme.highlights.languages." .. highlight)
+		local mod = require("voltage.highlights.languages." .. highlight)
 
-		for group, opts in pairs(mod.setup(colors, config)) do
-			vim.api.nvim_set_hl(0, group, opts)
+		for group, group_opts in pairs(mod.setup(colors, M.config)) do
+			vim.api.nvim_set_hl(0, group, group_opts)
 		end
 	end
 
 	for _, highlight in ipairs({ "netrw", "fzf", "blink", "mini" }) do
-		local mod = require("mycolortheme.highlights.plugins." .. highlight)
+		local mod = require("voltage.highlights.plugins." .. highlight)
 
-		for group, opts in pairs(mod.setup(colors, config)) do
-			vim.api.nvim_set_hl(0, group, opts)
+		for group, group_opts in pairs(mod.setup(colors, M.config)) do
+			vim.api.nvim_set_hl(0, group, group_opts)
 		end
 	end
 end

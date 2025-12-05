@@ -10,7 +10,7 @@ vim.pack.add({
 })
 
 require("plugins.alabaster")
-require("plugins.mycolortheme")
+require("plugins.voltage")
 require("plugins.mason")
 require("plugins.treesitter")
 require("plugins.fzf")
