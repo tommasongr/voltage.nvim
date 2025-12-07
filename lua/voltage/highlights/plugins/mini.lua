@@ -12,14 +12,14 @@ function M.setup(colors, config)
 		MiniClueSeparator = { fg = accent.light },
 		MiniClueTitle = { fg = accent.regular },
 
-		MiniDiffSignAdd = { fg = colors.green.light },
-		MiniDiffSignChange = { fg = colors.blue.light },
-		MiniDiffSignDelete = { fg = colors.red.light },
+		MiniDiffSignAdd = { fg = colors.green.dark },
+		MiniDiffSignChange = { fg = colors.yellow.dark },
+		MiniDiffSignDelete = { fg = colors.red.dark },
 
-		MiniHipatternsFixme = { bg = colors.red.dark, fg = colors.red.regular },
-		MiniHipatternsHack = { bg = colors.purple.dark, fg = colors.purple.regular },
-		MiniHipatternsTodo = { bg = colors.blue.dark, fg = colors.blue.regular },
-		MiniHipatternsNote = { bg = colors.yellow.dark, fg = colors.yellow.regular },
+		MiniHipatternsFixme = { bg = colors.red.darker, fg = colors.red.regular },
+		MiniHipatternsHack = { bg = colors.magenta.darker, fg = colors.magenta.regular },
+		MiniHipatternsTodo = { bg = colors.blue.darker, fg = colors.blue.regular },
+		MiniHipatternsNote = { bg = colors.yellow.darker, fg = colors.yellow.regular },
 
 		MiniNotifyBorder = { fg = accent.regular },
 		MiniNotifyLspProgress = { fg = accent.regular },

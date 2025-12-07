@@ -4,7 +4,7 @@ function M.setup(colors, config)
 	return {
 		Comment = { fg = colors.yellow.regular, italic = true },
 
-		Constant = { fg = colors.purple.regular },
+		Constant = { fg = colors.magenta.regular },
 		Boolean = { link = "Constant" },
 		String = { fg = colors.green.regular },
 		Character = { link = "String" },

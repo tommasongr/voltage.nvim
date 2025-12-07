@@ -9,13 +9,13 @@ function M.setup(colors, config)
 		NonText = { fg = colors.dimmed },
 		Conceal = { fg = colors.dimmed },
 
-		Cursor = { bg = accent.regular, fg = accent.darkest },
+		Cursor = { bg = accent.regular, fg = colors.inverted },
 		CursorLine = { bg = accent.darkest  },
 		CursorLineNr = { fg = accent.regular },
 		CursorColumn = { bg = accent.darkest },
 		ColorColumn = { bg = accent.dark },
 
-		Visual = { bg = accent.dark },
+		Visual = { bg = accent.darker },
 		VisualNOS = { bg = accent.darker },
 
 		Directory = { fg = accent.regular },
@@ -23,13 +23,13 @@ function M.setup(colors, config)
 		SpecialKey = { fg = colors.dimmed },
 		EndOfBuffer = { fg = colors.dimmed },
 
-		DiffAdd = { bg = colors.green.dark, fg = colors.green.regular },
-		DiffDelete = { bg = colors.red.dark, fg = colors.red.regular },
-		DiffText = { bg = colors.yellow.regular, fg = colors.yellow.darker },
-		DiffChange = { bg = colors.yellow.dark, fg = colors.yellow.regular },
+		DiffAdd = { bg = colors.green.darker, fg = colors.green.light },
+		DiffDelete = { bg = colors.red.darker, fg = colors.red.light },
+		DiffText = { bg = colors.yellow.regular, fg = colors.inverted },
+		DiffChange = { bg = colors.yellow.darker, fg = colors.yellow.light },
 
-		Search = { bg = accent.dark, fg = accent.regular },
-		IncSearch = { bg = accent.regular, fg = accent.darker },
+		Search = { bg = accent.darker, fg = accent.light },
+		IncSearch = { bg = accent.regular, fg = colors.inverted },
 		MatchParen = { fg = accent.regular },
 
 		LineNr = { fg = colors.dimmed },
@@ -38,42 +38,42 @@ function M.setup(colors, config)
 		Folded = { fg = accent.light },
 		FoldColumn = { fg = accent.light },
 
-		WinBar = { bg = accent.dark, fg = accent.regular },
-		WinBarNC = { bg = accent.darker, fg = accent.regular },
-		WinSeparator = { fg = accent.light },
-		VertSplit = { fg = accent.light },
+		WinBar = { bg = accent.dark, fg = accent.regular }, -- TODO: Verify
+		WinBarNC = { bg = accent.darker, fg = accent.regular }, -- TODO: Verify
+		WinSeparator = { fg = accent.regular },
+		VertSplit = { fg = accent.regular },
 
 		Pmenu = { fg = colors.fg },
 		PmenuExtra = { fg = colors.dimmed },
-		PmenuSel = { bg = accent.dark },
+		PmenuSel = { bg = accent.darker },
 		PmenuSbar = { bg = accent.regular },
 		PmenuThumb = { bg = accent.regular },
 		PmenuKind = { fg = accent.regular },
 		FloatBorder = { fg = accent.regular },
-		WildMenu = { bg = accent.dark },
+		WildMenu = { bg = accent.darker },
 
-		ErrorMsg = { fg = colors.red.regular, bg = colors.red.dark },
-		WarningMsg = { bg = colors.yellow.dark, fg = colors.yellow.regular },
+		ErrorMsg = { bg = colors.red.regular, fg = colors.inverted },
+		WarningMsg = { bg = colors.yellow.regular, fg = colors.inverted },
 		MoreMsg = { fg = colors.green.regular },
 		Question = { fg = colors.blue.regular },
 
-		StatusLine = { bg = accent.dark, fg = accent.regular },
-		StatusLineNC = { bg = accent.darker, fg = accent.regular },
-		TabLine = { bg = accent.dark, fg = accent.regular },
-		TabLineFill = { bg = accent.dark },
-		TabLineSel = { bg = accent.darker, fg = accent.regular },
+		StatusLine = { bg = accent.darker, fg = accent.lighter },
+		StatusLineNC = { bg = accent.darkest, fg = accent.light },
+		TabLine = { bg = accent.darker, fg = accent.light },
+		TabLineFill = { bg = accent.darker },
+		TabLineSel = { bg = accent.dark, fg = accent.lighter },
 
 		SpellBad = { undercurl = true, sp = colors.red.light },
 		SpellCap = { undercurl = true, sp = colors.blue.light },
 		SpellLocal = { undercurl = true, sp = colors.green.light },
-		SpellRare = { undercurl = true, sp = colors.purple.light },
+		SpellRare = { undercurl = true, sp = colors.magenta.light },
 
-		Title = { fg = accent.regular },
+		Title = { fg = accent.regular, bold = true },
 
-		TermCursor = { bg = accent.regular, fg = accent.darkest },
+		TermCursor = { bg = accent.regular, fg = colors.inverted },
 		TermCursorNC = { bg = accent.darker, fg = colors.dimmed },
 
-		QuickFixLine = { bg = accent.dark },
+		QuickFixLine = { bg = accent.darker },
 	}
 end
 

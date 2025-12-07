@@ -6,13 +6,13 @@ function M.setup(colors, config)
 	return {
 		BlinkCmpMenu = {},
 		BlinkCmpMenuBorder = { fg = accent.regular },
-		BlinkCmpMenuSelection = { bg = accent.dark },
+		BlinkCmpMenuSelection = { bg = accent.darker },
 		BlinkCmpScrollBarThumb = { bg = accent.regular },
 		BlinkCmpScrollBarGutter = { bg = accent.darker },
 
 		BlinkCmpLabel = { fg = colors.fg },
 		BlinkCmpLabelDeprecated = { fg = colors.dimmed, strikethrough = true },
-		BlinkCmpLabelMatch = { fg = accent.regular, bold = true },
+		BlinkCmpLabelMatch = { fg = accent.regular },
 		BlinkCmpLabelDetail = { fg = colors.dimmed },
 		BlinkCmpLabelDescription = { fg = colors.dimmed },
 

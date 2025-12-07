@@ -4,7 +4,7 @@ function M.setup(colors, config)
 	return {
 		["@comment"] = { fg = colors.yellow.regular },
 
-		["@constant"] = { fg = colors.purple.regular },
+		["@constant"] = { fg = colors.magenta.regular },
 		["@constant.builtin"] = { link = "@constant" },
 		["@string"] = { fg = colors.green.regular },
 		["@string.regex"] = { link = "@string" }, -- TODO: Differentiate regex
@@ -58,7 +58,7 @@ function M.setup(colors, config)
 		-- ["@label"] = { link = "Normal" },
 		-- ["@module"] = { link = "Normal" },
 		-- ["@namespace"] = { link = "Normal" },
-		-- -- ["@none"] = { fg = colors.purple.regular },
+		-- -- ["@none"] = { fg = colors.magenta.regular },
 		-- ["@parameter"] = { link = "Normal" },
 		-- ["@parameter.reference"] = { link = "Normal" },
 		-- ["@property"] = { link = "Normal" },

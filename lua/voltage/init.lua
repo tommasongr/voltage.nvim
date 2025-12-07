@@ -15,60 +15,71 @@ function M.setup(opts)
 	vim.g.colors_name = "voltage"
 
 	local colors = {
-		-- strings, numbers, etc
-		green = {
-			lightest = "#e6f3e8",
-			lighter = "#68766a",
-			light = "#99cda3",
-			regular = "#54dd7d",
-			dark    = "#1c3e24",
-			darker  = "#0c1a0f",
-			darkest = "#010502"
-		},
-		-- constants
-		purple = {
-			lightest = "#f7eaf5",
-			lighter = "#7a6d79",
-			light = "#dcabd6",
-			regular = "#fd8ff4",
-			dark    = "#472944",
-			darker  = "#1e111c",
-			darkest = "#060206"
-		},
-		-- comments
-		yellow = {
-			lightest = "#f4eee0",
-			lighter = "#777161",
-			light = "#d2bc82",
-			regular = "#ebb600",
-			dark    = "#41340a",
-			darker  = "#1b1505",
-			darkest = "#050300"
-		},
-		-- top-level definitions
-		blue = {
-			lightest = "#e0f2f6",
-			lighter = "#61767a",
-			light = "#7dccda",
-			regular = "#00d8f5",
-			dark    = "#003d46",
-			darker  = "#031a1e",
-			darkest = "#000406"
-		},
+		dimmed = "#636363",
 		-- errors, spellbad, etc
 		red = {
 			lightest = "#fceae8",
-			lighter = "#806c6a",
-			light = "#edaaa4",
-			regular = "#ff2335",
-			dark    = "#502825",
-			darker  = "#22100f",
-			darkest = "#080202"
+			lighter  = "#f3bfba",
+			light    = "#f69b94",
+			regular  = "#f5746d",
+			dark     = "#984742",
+			darker   = "#47211e",
+			darkest  = "#080202"
+		},
+		-- strings, numbers, etc
+		green = {
+			lightest = "#e6f3e8",
+			lighter  = "#b3d9b9",
+			light    = "#82cb92",
+			regular  = "#46bc69",
+			dark     = "#2b7440",
+			darker   = "#14361d",
+			darkest  = "#010502"
+		},
+		-- comments
+		yellow = {
+			lightest = "#f0f0e0",
+			lighter  = "#d3d1a3",
+			light    = "#c2bb64",
+			regular  = "#b1a600",
+			dark     = "#6d6600",
+			darker   = "#322f04",
+			darkest  = "#040300"
+		},
+		-- top-level definitions
+		blue = {
+			lightest = "#e4f0fb",
+			lighter  = "#aed3f3",
+			light    = "#78bff9",
+			regular  = "#32a9fe",
+			dark     = "#1f689d",
+			darker   = "#0f304a",
+			darkest  = "#010408"
+		},
+		-- constants
+		magenta = {
+			lightest = "#f6eaf6",
+			lighter  = "#e3c1e4",
+			light    = "#db9fde",
+			regular  = "#d27bd8",
+			dark     = "#824b85",
+			darker   = "#3d233e",
+			darkest  = "#060206"
+		},
+		cyan = {
+			lightest = "#e0f3f3",
+			lighter  = "#a0dbda",
+			light    = "#4fcdcd",
+			regular  = "#00bcbc",
+			dark     = "#007576",
+			darker   = "#003737",
+			darkest  = "#000505"
 		},
 	}
 
 	colors.fg = colors[M.config.accent].lightest
-	colors.dimmed = colors[M.config.accent].lighter
+	colors.inverted = colors[M.config.accent].darkest
+	-- colors.dimmed = colors[M.config.accent].dark
 
 	for _, highlight in ipairs({ "editor", "syntax", "treesitter" }) do
 		local mod = require("voltage.highlights." .. highlight)

@@ -1,49 +1,62 @@
-.green {
-	.lightest { color: oklch(0.95 0.02 150); }
-	.lighter { color: oklch(0.55 0.025 150); }
-	.light { color: oklch(0.8 0.08 150); }
-	.regular { color: oklch(0.8 0.18 150); }
-	.dark { color: oklch(0.33 0.06 150); }
-	.darker { color: oklch(0.2 0.03 150); }
-	.darkest { color: oklch(0.1 0.02 150); }
+.white-normal { color: oklch(0.78 0.00 0); } /* #b7b7b7 */
+.black-bright { color: oklch(0.50 0.00 0); } /* #636363 */
+
+.red {
+	.lightest { color: oklch(0.95 0.02 25); } /* #fceae8 */
+	.lighter  { color: oklch(0.85 0.06 25); } /* #f3bfba */
+	.light    { color: oklch(0.78 0.11 25); } /* #f69b94 */
+	.regular  { color: oklch(0.71 0.16 25); } /* #f5746d */
+	.dark     { color: oklch(0.50 0.11 25); } /* #984742 */
+	.darker   { color: oklch(0.30 0.06 25); } /* #47211e */
+	.darkest  { color: oklch(0.10 0.02 25); } /* #080202 */
 }
 
-.purple {
-	.lightest { color: oklch(0.95 0.02 330); }
-	.lighter { color: oklch(0.55 0.025 330); }
-	.light { color: oklch(0.8 0.08 330); }
-	.regular { color: oklch(0.8 0.18 330); }
-	.dark { color: oklch(0.33 0.06 330); }
-	.darker { color: oklch(0.2 0.03 330); }
-	.darkest { color: oklch(0.1 0.02 330); }
+.green {
+	.lightest { color: oklch(0.95 0.02 150); } /* #e6f3e8 */
+	.lighter  { color: oklch(0.85 0.06 150); } /* #b3d9b9 */
+	.light    { color: oklch(0.78 0.11 150); } /* #82cb92 */
+	.regular  { color: oklch(0.71 0.16 150); } /* #46bc69 */
+	.dark     { color: oklch(0.50 0.11 150); } /* #2b7440 */
+	.darker   { color: oklch(0.30 0.06 150); } /* #14361d */
+	.darkest  { color: oklch(0.10 0.02 150); } /* #010502 */
 }
 
 .yellow {
-	.lightest { color: oklch(0.95 0.02 90); }
-	.lighter { color: oklch(0.55 0.025 90); }
-	.light { color: oklch(0.8 0.08 90); }
-	.regular { color: oklch(0.8 0.18 90); }
-	.dark { color: oklch(0.33 0.06 90); }
-	.darker { color: oklch(0.2 0.03 90); }
-	.darkest { color: oklch(0.1 0.02 90); }
+	.lightest { color: oklch(0.95 0.02 105); } /* #f0f0e0 */
+	.lighter  { color: oklch(0.85 0.06 105); } /* #d3d1a3 */
+	.light    { color: oklch(0.78 0.11 105); } /* #c2bb64 */
+	.regular  { color: oklch(0.71 0.16 105); } /* #b1a600 */
+	.dark     { color: oklch(0.50 0.11 105); } /* #6d6600 */
+	.darker   { color: oklch(0.30 0.06 105); } /* #322f04 */
+	.darkest  { color: oklch(0.10 0.02 105); } /* #040300 */
 }
 
 .blue {
-	.lightest { color: oklch(0.95 0.02 210); }
-	.lighter { color: oklch(0.55 0.025 210); }
-	.light { color: oklch(0.8 0.08 210); }
-	.regular { color: oklch(0.8 0.18 210); }
-	.dark { color: oklch(0.33 0.06 210); }
-	.darker { color: oklch(0.2 0.03 210); }
-	.darkest { color: oklch(0.1 0.02 210); }
+	.lightest { color: oklch(0.95 0.02 245); } /* #e4f0fb */
+	.lighter  { color: oklch(0.85 0.06 245); } /* #aed3f3 */
+	.light    { color: oklch(0.78 0.11 245); } /* #78bff9 */
+	.regular  { color: oklch(0.71 0.16 245); } /* #32a9fe */
+	.dark     { color: oklch(0.50 0.11 245); } /* #1f689d */
+	.darker   { color: oklch(0.30 0.06 245); } /* #0f304a */
+	.darkest  { color: oklch(0.10 0.02 245); } /* #010408 */
 }
 
-.red {
-	.lightest { color: oklch(0.95 0.02 25); }
-	.lighter { color: oklch(0.55 0.025 25); }
-	.light { color: oklch(0.8 0.08 25); }
-	.regular { color: oklch(0.65 0.25 25); }
-	.dark { color: oklch(0.33 0.06 25); }
-	.darker { color: oklch(0.2 0.03 25); }
-	.darkest { color: oklch(0.1 0.02 25); }
+.magenta {
+	.lightest { color: oklch(0.95 0.02 325); } /* #f6eaf6 */
+	.lighter  { color: oklch(0.85 0.06 325); } /* #e3c1e4 */
+	.light    { color: oklch(0.78 0.11 325); } /* #db9fde */
+	.regular  { color: oklch(0.71 0.16 325); } /* #d27bd8 */
+	.dark     { color: oklch(0.50 0.11 325); } /* #824b85 */
+	.darker   { color: oklch(0.30 0.06 325); } /* #3d233e */
+	.darkest  { color: oklch(0.10 0.02 325); } /* #060206 */
+}
+
+.cyan {
+	.lightest { color: oklch(0.95 0.02 195); } /* #e0f3f3 */
+	.lighter  { color: oklch(0.85 0.06 195); } /* #a0dbda */
+	.light    { color: oklch(0.78 0.11 195); } /* #4fcdcd */
+	.regular  { color: oklch(0.71 0.16 195); } /* #00bcbc */
+	.dark     { color: oklch(0.50 0.11 195); } /* #007576 */
+	.darker   { color: oklch(0.30 0.06 195); } /* #003737 */
+	.darkest  { color: oklch(0.10 0.02 195); } /* #000505 */
 }
