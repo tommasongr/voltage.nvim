@@ -1,0 +1,186 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+# : Manager {{{
+
+[mgr]
+cwd = { fg = "#00bcbc" } # cyan.regular
+
+# Hovered
+hovered         = { reversed = true }
+preview_hovered = { underline = true }
+
+# Find
+find_keyword  = { fg = "#b1a600", bold = true, italic = true, underline = true } # yellow.regular
+find_position = { fg = "#d27bd8", bg = "reset", bold = true, italic = true } # magenta.regular
+
+# Marker
+marker_copied   = { fg = "#46bc69", bg = "#46bc69" } # green.regular
+marker_cut      = { fg = "#f5746d", bg = "#f5746d" } # red.regular
+marker_marked   = { fg = "#00bcbc", bg = "#00bcbc" } # cyan.regular
+marker_selected = { fg = "#b1a600", bg = "#b1a600" } # yellow.regular
+
+# Count
+count_copied   = { fg = "#060206", bg = "#46bc69" } # magenta.darkest, green.regular
+count_cut      = { fg = "#060206", bg = "#f5746d" } # magenta.darkest, red.regular
+count_selected = { fg = "#060206", bg = "#b1a600" } # magenta.darkest, yellow.regular
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#636363" } # dimmed
+
+# : }}}
+
+
+# : Tabs {{{
+
+[tabs]
+active   = { fg = "#060206", bg = "#d27bd8", bold = true } # magenta.darkest, magenta.regular
+inactive = { fg = "#d27bd8", bg = "#3d233e" } # magenta.regular, magenta.darker
+
+# : }}}
+
+
+# : Mode {{{
+
+[mode]
+
+normal_main = { fg = "#060206", bg = "#d27bd8", bold = true } # magenta.darkest, magenta.regular
+normal_alt  = { fg = "#d27bd8", bg = "#3d233e" } # magenta.regular, magenta.darker
+
+# Select mode
+select_main = { fg = "#060206", bg = "#00bcbc", bold = true } # magenta.darkest, cyan.regular
+select_alt  = { fg = "#00bcbc", bg = "#3d233e" } # cyan.regular, magenta.darker
+
+# Unset mode
+unset_main = { fg = "#060206", bg = "#f69b94", bold = true } # magenta.darkest, red.light
+unset_alt  = { fg = "#f69b94", bg = "#3d233e" } # red.light, magenta.darker
+
+# : }}}
+
+
+# : Status bar {{{
+
+[status]
+# Permissions
+perm_sep   = { fg = "#636363" } # dimmed
+perm_type  = { fg = "#d27bd8" } # magenta.regular
+perm_read  = { fg = "#b1a600" } # yellow.regular
+perm_write = { fg = "#f5746d" } # red.regular
+perm_exec  = { fg = "#46bc69" } # green.regular
+
+# Progress
+progress_label  = { fg = "#f6eaf6", bold = true } # magenta.lightest
+progress_normal = { fg = "#46bc69", bg = "#824b85" } # green.regular, magenta.dark
+progress_error  = { fg = "#b1a600", bg = "#f5746d" } # yellow.regular, red.regular
+
+# : }}}
+
+
+# : Pick {{{
+
+[pick]
+border   = { fg = "#d27bd8" } # magenta.regular
+active   = { fg = "#00bcbc", bold = true } # cyan.regular
+inactive = {}
+
+# : }}}
+
+
+# : Input {{{
+
+[input]
+border   = { fg = "#d27bd8" } # magenta.regular
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+# : }}}
+
+
+# : Completion {{{
+
+[cmp]
+border = { fg = "#d27bd8" } # magenta.regular
+
+# : }}}
+
+
+# : Tasks {{{
+
+[tasks]
+border  = { fg = "#d27bd8" } # magenta.regular
+title   = {}
+hovered = { fg = "#00bcbc", bold = true } # cyan.regular
+
+# : }}}
+
+
+# : Which {{{
+
+[which]
+mask            = { bg = "#3d233e" } # magenta.darker
+cand            = { fg = "#00bcbc" } # cyan.regular
+rest            = { fg = "#636363" } # dimmed
+desc            = { fg = "#32a9fe" } # blue.regular
+separator       = "  "
+separator_style = { fg = "#824b85" } # magenta.dark
+
+# : }}}
+
+
+# : Help {{{
+
+[help]
+on      = { fg = "#00bcbc" } # cyan.regular
+run     = { fg = "#32a9fe" } # blue.regular
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#3d233e", bg = "#f6eaf6" } # magenta.darker, magenta.lightest
+
+# : }}}
+
+
+# : Spotter {{{
+
+[spot]
+border   = { fg = "#d27bd8" } # magenta.regular
+title    = { fg = "#d27bd8" } # magenta.regular
+tbl_col  = { fg = "#00bcbc" } # cyan.regular
+tbl_cell = { fg = "#32a9fe", bg = "#824b85" } # blue.regular, magenta.dark
+
+# : }}}
+
+
+# : Notification {{{
+
+[notify]
+title_info  = { fg = "#46bc69" } # green.regular
+title_warn  = { fg = "#b1a600" } # yellow.regular
+title_error = { fg = "#f5746d" } # red.regular
+
+# : }}}
+
+
+# : File-specific styles {{{
+
+[filetype]
+
+rules = [
+	# Image
+	{ mime = "image/*", fg = "#00bcbc" }, # cyan.regular
+	# Media
+	{ mime = "{audio,video}/*", fg = "#b1a600" }, # yellow.regular
+	# Archive
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#d27bd8" }, # magenta.regular
+	# Document
+	{ mime = "application/{pdf,doc,rtf}", fg = "#46bc69" }, # green.regular
+	# Virtual file system
+	{ mime = "vfs/{absent,stale}", fg = "#636363" }, # dimmed
+	# Fallback
+	{ url = "*", fg = "#f6eaf6" }, # magenta.lightest
+	{ url = "*/", fg = "#d27bd8" }, # magenta.regular
+	# TODO: remove
+	{ name = "*", fg = "#f6eaf6" }, # magenta.lightest
+	{ name = "*/", fg = "#d27bd8" } # magenta.regular
+]
+
+# : }}}
